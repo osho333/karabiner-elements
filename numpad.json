@@ -2,7 +2,7 @@
     "title": "HHKB-NumpadP",
     "rules": [
         {
-	"description": "left optionキーでナンバーパット",
+	"description": "left optionを修飾キーにしてNumlockぽくする",
             "manipulators": [
                 {
                     "type": "basic",
