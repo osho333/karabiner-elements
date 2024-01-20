@@ -1,0 +1,38 @@
+{
+  "title": "kana-eisuu-toggle",
+  "rules": [
+    {
+      "description": "かなキーでトグル入力できるようにする",
+      "manipulators": [
+        {
+          "type": "basic",
+          "description": "入力ソースが英字の場合、ひらがなにする（入力ソースがひらがなの場合、上書きの必要なし）",
+          "from": { "key_code": "japanese_kana" },
+          "to": [ { "key_code": "japanese_eisuu" } ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [ { "language": "ja" } ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+	"description": "ctrl-Mをenterにする",
+	"manipulators": [
+		{
+			"type": "basic",
+			"from": { "key_code": "m",
+			"modifiers": { "mandatory": [ "control" ] }
+						  },
+				  "to": [
+					  { "key_code": "return_or_enter" }
+				  ]
+				}
+			]
+
+	
+    }
+  ]
+}
